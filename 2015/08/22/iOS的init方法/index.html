@@ -88,12 +88,12 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2015/12/03/hello-world/index.html">
+<meta property="og:title" content="iOS的init方法">
+<meta property="og:url" content="http://yoursite.com/2015/08/22/iOS的init方法/index.html">
 <meta property="og:site_name" content="libcoco的博客">
-<meta property="og:updated_time" content="2017-02-08T03:41:25.000Z">
+<meta property="og:updated_time" content="2017-02-20T05:20:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
+<meta name="twitter:title" content="iOS的init方法">
 
 
 
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2015/12/03/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2015/08/22/iOS的init方法/"/>
 
 
 
 
 
-  <title> Hello World | libcoco的博客 </title>
+  <title> iOS的init方法 | libcoco的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -254,7 +254,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/12/03/hello-world/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/08/22/iOS的init方法/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="xklibcoco">
@@ -278,7 +278,7 @@
             
             
               
-                Hello World
+                iOS的init方法
               
             
           </h1>
@@ -293,8 +293,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-12-03T00:00:00+08:00">
-                2015-12-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-08-22T12:07:43+08:00">
+                2015-08-22
               </time>
             
 
@@ -316,8 +316,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/个人成长/" itemprop="url" rel="index">
-                    <span itemprop="name">个人成长</span>
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
                   </a>
                 </span>
 
@@ -351,15 +351,18 @@
       
 
       
-        <p><excerpt in="" index="" |="" 首页摘要=""><br><a id="more"></a><br>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</excerpt></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <!--<Excerpt in index | 首页摘要> -->
+<a id="more"></a>
+<h2 id="init方法"><a href="#init方法" class="headerlink" title="init方法"></a>init方法</h2><p>在init方法中实例化必要的对象（遵从LazyLoad思想）<br>init方法中初始化ViewController本身</p>
+<h2 id="loadView方法"><a href="#loadView方法" class="headerlink" title="loadView方法"></a>loadView方法</h2><p>当view需要被展示而它却是nil时，viewController会调用该方法。不要直接调用该方法。<br>如果手工维护views，必须重写该方法。<br>如果使用IB维护views，必须不能重写该方法。<br>loadView和IB构建view</p>
+<h2 id="viewDidLoad方法"><a href="#viewDidLoad方法" class="headerlink" title="viewDidLoad方法"></a>viewDidLoad方法</h2><p>重写该方法以进一步定制view。<br>在iPhone OS 3.0及之后的版本中，还应该重写viewDidUnload来释放对view的任何索引。<br>viewDidLoad后调用数据Model。</p>
+<h2 id="viewDidUnload方"><a href="#viewDidUnload方" class="headerlink" title="viewDidUnload方"></a>viewDidUnload方</h2><p>当系统内存吃紧的时候会调用该方法（注：viewController没有被dealloc）。<br>内存吃紧时，在iPhone OS 3.0之前didReceiveMemoryWarning是释放无用内存的唯一方式，但是OS 3.0及以后viewDidUnload方法是更好的方式。<br>在该方法中将所有IBOutlet（无论是property还是实例变量）置为nil（系统release view时已经将其release掉了）。<br>在该方法中释放其他与view有关的对象、其他在运行时创建（但非系统必须）的对象、在viewDidLoad中被创建的对象、缓存数据等。<br>release对象后，将对象置为nil（IBOutlet只需要将其置为nil，系统release view时已经将其release掉了）。<br>一般认为viewDidUnload是viewDidLoad的镜像，因为当view被重新请求时，viewDidLoad还会重新被执行。<br>viewDidUnload中被release的对象必须是很容易被重新创建的对象（比如在viewDidLoad或其他方法中创建的对象），不要release用户数据或其他很难被重新创建的对象。</p>
+<h2 id="dealloc方法"><a href="#dealloc方法" class="headerlink" title="dealloc方法"></a>dealloc方法</h2><p>viewDidUnload和dealloc方法没有关联，dealloc还是继续做它该做的事情。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">- (void)viewDidUnload &#123;  </div><div class="line">self.startButton = nil;   </div><div class="line">[setupViewController release];  </div><div class="line">setupViewController = nil;</div><div class="line">&#125; </div><div class="line">- (void)dealloc &#123;   </div><div class="line">[startButton release];    </div><div class="line">[setupViewController release];   </div><div class="line">[super dealloc];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="loadView"><a href="#loadView" class="headerlink" title="loadView"></a>loadView</h2><p>永远不要主动调用这个函数。view controller会在view的property被请求并且当前view值为nil时调用这个函数。如果你手动创建view，你应该重载这个函数。如果你用IB创建view并初始化view controller，那就意味着你使用initWithNibName:bundle:方法，这时，你不应该重载loadView函数。<br>这个方法的默认实现是这样：先寻找有关可用的nib文件的信息，根据这个信息来加载nib文件，如果没有有关nib文件的信息，默认实现会创建一个空白的UIView对象，然后让这个对象成为controller的主view。所以，重载这个函数时，你也应该这么做。并把子类的view赋给view属性(property)（你create的view必须是唯一的实例，并且不被其他任何controller共享），而且你重载的这个函数不应该调用super。<br>如果你要进行进一步初始化你的views，你应该在viewDidLoad函数中去做。在iOS 3.0以及更高版本中，你应该重载viewDidUnload函数来释放任何对view的引用或者它里面的内容（子view等等）。</p>
+<h2 id="viewDidLoad"><a href="#viewDidLoad" class="headerlink" title="viewDidLoad"></a>viewDidLoad</h2><p>这个函数在controller加载了相关的views后被调用，而不论这些views存储在nib文件里还是在loadView函数中生成。而多数情况下是做nib文件的后续工作。</p>
+<h2 id="viewDidUnload"><a href="#viewDidUnload" class="headerlink" title="viewDidUnload"></a>viewDidUnload</h2><p>这个函数是viewDidLoad的对立函数。在程序内存欠缺时，这个函数被controller调用（）。由于controller通常保存着与view（这里黑体的view指controller的view属性）相关的对象（一般是view的子view）或者其他运行时创建的对象的引用，所以你必须使用这个函数来放弃这些对象的所有权以便内存回收。但不要释放那些难以重建的数据（不要在这个函数中释放view）。<br>通常controller会保存nib文件建立的views的引用，但是也可能会保存着loadView函数创建的对象的引用。<br>最完美的方法是使用合成器方法：<code>self.myCertainView = nil;</code><br>这样合成器会release这个view，如果你没有使用property，那么你得自己显式释放这个view。<br>另外：如果controller存储了其他object和view的引用，你还得在dealloc方法中释放这些内存。对于iOS2.x，你还必须在调用super dealloc方法前将这些引用置为nil。</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>(loadView/nib文件)来加载view到内存 ——&gt;viewDidLoad函数进一步初始化这些view ——&gt;内存不足时，调用viewDidUnload函数释放views。<br>当需要使用view时又回到第一步。</p>
 
       
     </div>
@@ -390,15 +393,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/03/html/" rel="next" title="7天学会html">
-                <i class="fa fa-chevron-left"></i> 7天学会html
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/12/03/html/" rel="prev" title="7天学会html">
+                7天学会html <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -521,7 +524,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#init方法"><span class="nav-number">1.</span> <span class="nav-text">init方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#loadView方法"><span class="nav-number">2.</span> <span class="nav-text">loadView方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#viewDidLoad方法"><span class="nav-number">3.</span> <span class="nav-text">viewDidLoad方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#viewDidUnload方"><span class="nav-number">4.</span> <span class="nav-text">viewDidUnload方</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dealloc方法"><span class="nav-number">5.</span> <span class="nav-text">dealloc方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#loadView"><span class="nav-number">6.</span> <span class="nav-text">loadView</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#viewDidLoad"><span class="nav-number">7.</span> <span class="nav-text">viewDidLoad</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#viewDidUnload"><span class="nav-number">8.</span> <span class="nav-text">viewDidUnload</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结论"><span class="nav-number">9.</span> <span class="nav-text">结论</span></a></li></ol></div>
             
 
           </div>
